@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "./Navigation";
+import AsistenteIA from "../../components/AsistenteIA";
 
 export default function AppLayout() {
   return (
@@ -8,6 +9,7 @@ export default function AppLayout() {
       <main className="max-w-[1400px] mx-auto px-4 py-7">
         <Outlet />
       </main>
+      <AsistenteIA />
     </div>
   );
 }

@@ -202,7 +202,7 @@ export function ToastProvider({ children }) {
   return (
     <ToastContext.Provider value={api}>
       {children}
-      <div className="fixed bottom-5 right-5 z-[60] space-y-2 no-print">
+      <div className="fixed bottom-5 left-5 z-[60] space-y-2 no-print">
         {toasts.map((t) => {
           const Icon = t.type === "success" ? CheckCircle2 : t.type === "error" ? AlertCircle : Info;
           const color = t.type === "success" ? "text-green-600" : t.type === "error" ? "text-red-600" : "text-[#2E7CF6]";
