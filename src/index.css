@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #252525;
+}
+
+* {
+  border-color: #ebebeb;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #252525;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+[role="button"],
+a,
+label[for],
+select {
+  cursor: pointer;
+}
+
+@layer components {
+  /* Hero / panel gradient used across landing, auth and distributor screens */
+  .bg-ink-gradient {
+    background: linear-gradient(145deg, #1c2333 0%, #0f172a 100%);
+  }
+  .bg-ink-gradient-135 {
+    background: linear-gradient(135deg, #1c2333 0%, #0f172a 100%);
+  }
+  .nav-hover:hover {
+    color: #0066cc !important;
+  }
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+}
