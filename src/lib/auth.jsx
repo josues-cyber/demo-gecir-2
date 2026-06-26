@@ -50,12 +50,13 @@ export function AuthProvider({ children }) {
       session,
       isAuth: !!session,
       // Login app/empresa: acepta cualquier credencial en la demo.
-      loginUsuario(email) {
+      // `empresa` opcional permite mostrar el nombre del cliente recién dado de alta.
+      loginUsuario(email, empresa) {
         const s = {
           email: email || DEMO_ACCOUNTS.usuario.email,
           userType: "superadmin",
           nombre: DEMO_ACCOUNTS.usuario.nombre,
-          empresa: DEMO_ACCOUNTS.usuario.empresa,
+          empresa: empresa || DEMO_ACCOUNTS.usuario.empresa,
           context: "usuario",
         };
         setSession(s);

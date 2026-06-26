@@ -8,6 +8,7 @@ import LoginEmpresa from "./pages/auth/LoginEmpresa";
 import SignUp from "./pages/auth/SignUp";
 import Pago from "./pages/auth/Pago";
 import Entorno from "./pages/entorno/Entorno";
+import Onboarding from "./pages/onboarding/Onboarding";
 import DistribuidorLogin from "./pages/distribuidor/Login";
 import DistribuidorRegistro from "./pages/distribuidor/Registro";
 import DistribuidorRegistroPago from "./pages/distribuidor/RegistroPago";
@@ -68,6 +69,7 @@ export default function App() {
       <Route path="/auth/sign-up" element={<SignUp />} />
       <Route path="/auth/pago" element={<Pago />} />
       <Route path="/entorno" element={<Entorno />} />
+      <Route path="/onboarding" element={<Onboarding />} />
       <Route path="/distribuidor/login" element={<DistribuidorLogin />} />
       <Route path="/distribuidor/registro" element={<DistribuidorRegistro />} />
       <Route path="/distribuidor/registro/pago" element={<DistribuidorRegistroPago />} />
